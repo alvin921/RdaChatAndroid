@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">rdachat</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Contact">通讯录</string>
+    <string name="input_new_topic">请输入Topic Name</string>
+    <string name="add_to_topic">添加新成员</string>
+    <string name="send_msg">发送消息</string>
+    <string name="topic">群组</string>
+    <string name="chat">进入聊天</string>
+    <string name="profile">详细资料</string>
+
+</resources>
