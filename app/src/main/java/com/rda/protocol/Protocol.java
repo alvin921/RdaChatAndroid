@@ -8,9 +8,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.concurrent.ArrayBlockingQueue;
 
-/**
- * Created by haroldmiao on 2014/12/26.
- */
+
 public class Protocol {
     private Gson gson = new Gson();
     public static final int MAX_PACKET_SIZE = 256 << 20;

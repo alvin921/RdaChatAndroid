@@ -204,7 +204,6 @@ public class ChatActivity extends MyActivity{
         }
 
         public void addItem(ChatData data, Cmd cmd){
-            //data.add(new MsgCellData(R.drawable.touxiang, (String)cmd.getArg(1), (String)cmd.getArg(0)));
 
             notifyDataSetChanged();
         }

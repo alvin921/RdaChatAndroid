@@ -8,9 +8,6 @@ import android.view.ViewGroup;
 
 import com.rda.chat.R;
 
-/**
- * Created by haroldmiao on 2015/2/15.
- */
 public class TabMeFragment extends Fragment {
     private static final String TAG = "TabMeFragment";
 
