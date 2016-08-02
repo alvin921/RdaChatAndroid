@@ -43,7 +43,10 @@ public class LoginActivity extends MyActivity {
     @Override
     public void onDestroy(){
         super.onDestroy();
-        unregisterReceiver(receiver);
+        if(receiver != null) {
+            unregisterReceiver(receiver);
+            receiver = null;
+        }
     }
 
     @Override
@@ -136,9 +139,13 @@ public class LoginActivity extends MyActivity {
                             Config.setString(LoginActivity.this, Config.KEY_SERVER_ADDR, rsp.SAddr);
 
                             mService.stop();
-                            Intent i = new Intent(LoginActivity.this, ChatMainActivity.class);
-                            startActivity(i);
-                            LoginActivity.this.finish();
+                            if(receiver != null) {
+                                unregisterReceiver(receiver);
+                                receiver = null;
+                            }
+                            finish();
+
+                            startActivity(new Intent(LoginActivity.this, ChatMainActivity.class));
                         } else {
                             Log.d(TAG, "Login failed.");
                             Toast.makeText(LoginActivity.this, "Login failed: " + cmd.getArg(0), Toast.LENGTH_LONG).show();
